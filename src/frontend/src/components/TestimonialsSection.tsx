@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 const testimonials = [
   {
     quote:
-      "Veeru Sir explains Maths concepts very clearly. My marks improved from 62% to 90%.",
+      "Our teacher explains Maths concepts very clearly. My marks improved from 62% to 90%.",
     author: "Class 10 Student",
     badge: "Mathematics",
     badgeColor: "oklch(0.35 0.12 158)",

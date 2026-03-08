@@ -67,11 +67,11 @@ export default function TeacherSection() {
             Faculty
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-4">
-            Meet Your Teacher
+            Expert Teaching, Proven Results
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            Learn from an experienced educator dedicated to making Science and
-            Maths approachable for every student.
+            Guided by an experienced CBSE educator with deep expertise in
+            Science and Maths, dedicated to building strong student foundations.
           </p>
         </motion.div>
 
@@ -98,14 +98,14 @@ export default function TeacherSection() {
                 <GraduationCap className="h-10 w-10 text-white" />
               </div>
               <div>
-                <h3 className="font-display text-2xl font-bold text-foreground mb-1">
-                  Sir
-                </h3>
-                <p className="text-muted-foreground font-body text-base">
+                <p className="text-foreground font-body text-base font-semibold">
                   Science & Mathematics Educator
                 </p>
                 <p className="text-muted-foreground font-body text-sm mt-0.5">
-                  8 years of experience teaching CBSE students
+                  8+ years of experience teaching CBSE students
+                </p>
+                <p className="text-muted-foreground font-body text-sm mt-0.5">
+                  Expert in Paper Valuation & Curriculum Development
                 </p>
               </div>
             </div>
