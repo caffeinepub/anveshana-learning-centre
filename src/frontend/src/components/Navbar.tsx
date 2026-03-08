@@ -51,7 +51,7 @@ export default function Navbar({
           {/* Logo + Name */}
           <div className="flex items-center gap-3 shrink-0">
             <img
-              src="/assets/generated/logo-transparent.dim_300x300.png"
+              src="/assets/71f72604-2c93-4317-b941-7126d3547a6a.png"
               alt="Anveshana Learning Centre"
               className="h-10 w-10 object-contain"
             />

@@ -82,120 +82,96 @@ export default function TeacherSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" as const }}
-          className="max-w-4xl mx-auto rounded-3xl overflow-hidden bg-card border border-border shadow-card-hover"
+          className="max-w-3xl mx-auto rounded-3xl overflow-hidden bg-card border border-border shadow-card-hover"
         >
-          <div className="grid md:grid-cols-[340px_1fr]">
-            {/* Photo Column */}
-            <div
-              className="relative flex items-end justify-center pt-10 pb-0 md:pb-0 overflow-hidden min-h-[320px]"
-              style={{
-                background:
-                  "linear-gradient(160deg, oklch(0.38 0.13 158) 0%, oklch(0.28 0.10 165) 100%)",
-              }}
-            >
-              {/* Decorative dots */}
-              <div className="absolute top-6 left-6 grid grid-cols-4 gap-2 opacity-20">
-                {Array.from({ length: 16 }).map((_, i) => (
-                  // biome-ignore lint/suspicious/noArrayIndexKey: static decorative grid
-                  <div key={i} className="w-1.5 h-1.5 rounded-full bg-white" />
-                ))}
-              </div>
-
-              {/* Award ribbon top-right */}
+          <div className="p-8 lg:p-12 flex flex-col gap-6">
+            {/* Role & Experience */}
+            <div className="flex items-start gap-5">
+              {/* Icon avatar */}
               <div
-                className="absolute top-5 right-5 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold"
+                className="shrink-0 w-20 h-20 rounded-2xl flex items-center justify-center"
                 style={{
-                  background: "oklch(0.72 0.18 65 / 0.25)",
-                  border: "1px solid oklch(0.72 0.18 65 / 0.5)",
-                  color: "oklch(0.92 0.12 78)",
+                  background:
+                    "linear-gradient(160deg, oklch(0.38 0.13 158) 0%, oklch(0.28 0.10 165) 100%)",
                 }}
               >
-                <Award className="h-3.5 w-3.5" />
-                Jnanagaurava Award
+                <GraduationCap className="h-10 w-10 text-white" />
               </div>
-
-              <img
-                src="/assets/generated/teacher-profile-transparent.dim_400x400.png"
-                alt="Science and Mathematics Educator"
-                className="relative z-10 w-56 h-56 md:w-full md:h-72 object-contain object-bottom"
-              />
-            </div>
-
-            {/* Bio Column */}
-            <div className="p-8 lg:p-10 flex flex-col justify-center gap-5">
-              {/* Role & Experience */}
               <div>
                 <h3 className="font-display text-2xl font-bold text-foreground mb-1">
-                  Science & Mathematics Educator
+                  Sir
                 </h3>
-                <p className="text-muted-foreground font-body">
+                <p className="text-muted-foreground font-body text-base">
+                  Science & Mathematics Educator
+                </p>
+                <p className="text-muted-foreground font-body text-sm mt-0.5">
                   8 years of experience teaching CBSE students
                 </p>
               </div>
+            </div>
 
-              {/* Highlight badges */}
-              <div className="flex flex-wrap gap-2">
-                {highlights.map((h) => {
-                  const Icon = h.icon;
-                  return (
-                    <Badge
-                      key={h.label}
-                      className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-semibold rounded-full text-white border-0"
-                      style={{ background: h.color }}
-                    >
-                      <Icon className="h-3.5 w-3.5" />
-                      {h.label}
-                    </Badge>
-                  );
-                })}
-              </div>
+            {/* Highlight badges */}
+            <div className="flex flex-wrap gap-2">
+              {highlights.map((h) => {
+                const Icon = h.icon;
+                return (
+                  <Badge
+                    key={h.label}
+                    className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-semibold rounded-full text-white border-0"
+                    style={{ background: h.color }}
+                  >
+                    <Icon className="h-3.5 w-3.5" />
+                    {h.label}
+                  </Badge>
+                );
+              })}
+            </div>
 
-              {/* Award callout */}
-              <div
-                className="rounded-xl px-4 py-3 flex items-start gap-3"
-                style={{
-                  background:
-                    "linear-gradient(135deg, oklch(0.85 0.16 78 / 0.2), oklch(0.92 0.08 78 / 0.15))",
-                  border: "1px solid oklch(0.72 0.18 65 / 0.3)",
-                }}
+            {/* Award callout */}
+            <div
+              className="rounded-xl px-4 py-3 flex items-start gap-3"
+              style={{
+                background:
+                  "linear-gradient(135deg, oklch(0.85 0.16 78 / 0.2), oklch(0.92 0.08 78 / 0.15))",
+                border: "1px solid oklch(0.72 0.18 65 / 0.3)",
+              }}
+            >
+              <Award
+                className="h-5 w-5 mt-0.5 shrink-0"
+                style={{ color: "oklch(0.56 0.16 65)" }}
+              />
+              <p
+                className="text-sm font-semibold font-body"
+                style={{ color: "oklch(0.38 0.10 65)" }}
               >
-                <Award
-                  className="h-5 w-5 mt-0.5 shrink-0"
-                  style={{ color: "oklch(0.56 0.16 65)" }}
-                />
-                <p
-                  className="text-sm font-semibold font-body"
-                  style={{ color: "oklch(0.38 0.10 65)" }}
-                >
-                  Awarded the Jnanagaurava Award for outstanding contribution to
-                  education.
-                </p>
-              </div>
-
-              {/* Bio paragraph */}
-              <p className="text-muted-foreground text-sm leading-relaxed font-body">
-                Dedicated to simplifying complex concepts and building strong
-                academic foundations. Known for making Science and Maths
-                accessible, engaging, and exam-ready for every student.
+                Awarded the Jnanagaurava Award for outstanding contribution to
+                education.
               </p>
+            </div>
 
-              {/* Stats row */}
-              <div className="flex gap-6 pt-2 border-t border-border">
-                {[
-                  { value: "8+", label: "Years Teaching" },
-                  { value: "CBSE", label: "Specialist" },
-                  { value: "7–10", label: "Grade Range" },
-                ].map((stat) => (
-                  <div key={stat.label} className="text-center">
-                    <div className="font-display text-xl font-bold text-primary">
-                      {stat.value}
-                    </div>
-                    <div className="text-xs text-muted-foreground font-medium">
-                      {stat.label}
-                    </div>
+            {/* Bio paragraph */}
+            <p className="text-muted-foreground text-sm leading-relaxed font-body">
+              Dedicated to simplifying complex concepts and building strong
+              academic foundations. Known for making Science and Maths
+              accessible, engaging, and exam-ready for every student.
+            </p>
+
+            {/* Stats row */}
+            <div className="flex gap-6 pt-2 border-t border-border">
+              {[
+                { value: "8+", label: "Years Teaching" },
+                { value: "CBSE", label: "Specialist" },
+                { value: "7–10", label: "Grade Range" },
+              ].map((stat) => (
+                <div key={stat.label} className="text-center">
+                  <div className="font-display text-xl font-bold text-primary">
+                    {stat.value}
                   </div>
-                ))}
-              </div>
+                  <div className="text-xs text-muted-foreground font-medium">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </motion.div>

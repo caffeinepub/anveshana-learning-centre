@@ -185,7 +185,7 @@ export default function HeroSection() {
             {/* Inner card */}
             <div className="relative z-10 bg-card rounded-3xl p-10 shadow-card-hover border border-border/50 flex flex-col items-center gap-4 max-w-xs w-full">
               <img
-                src="/assets/generated/logo-transparent.dim_300x300.png"
+                src="/assets/71f72604-2c93-4317-b941-7126d3547a6a.png"
                 alt="Anveshana Learning Centre"
                 className="w-40 h-40 object-contain"
               />
